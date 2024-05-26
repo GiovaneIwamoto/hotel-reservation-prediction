@@ -1,0 +1,8 @@
+version: '3'
+services:
+  backend:
+    build: .
+    ports:
+      - 80:8000
+    volumes:
+      - ./.aws/:/root/.aws:ro

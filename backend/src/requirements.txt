@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+boto3
+pydantic
+python-dotenv
+docker
+docker-compose
+xgboost==0.90
+awscli
