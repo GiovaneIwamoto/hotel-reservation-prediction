@@ -14,9 +14,9 @@ RUN pip3 install -r requirements.txt
 # Copy the application code to the working directory
 COPY . .
 
-ENV S3_BUCKET_NAME=bucket-s3-modelo
+ENV S3_BUCKET_NAME=
 ENV MODEL_FILE_NAME=model.tar.gz
-ENV DYNAMODB_TABLE_NAME=InferenceResults
+ENV DYNAMODB_TABLE_NAME=
 
 # Run the FastAPI application using uvicorn server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
