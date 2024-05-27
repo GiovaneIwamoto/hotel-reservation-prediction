@@ -131,8 +131,4 @@ dist
 
 # Backend files
 *__pycache__
-/backend/src/xgboost-model
-/backend/src/models/*
-*.csv
-*.gz
 .aws/
