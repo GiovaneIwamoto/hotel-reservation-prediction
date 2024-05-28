@@ -10,7 +10,7 @@ The creation and training of the model were carried out using _Amazon SageMaker_
 
 ![alt text](docs/image.png)
 
-> MODEL TRAINING
+> ### MODEL TRAINING
 
 The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset), which contains various information about thousands of reservations, including the price per room, our target variable for analysis. The dataset is stored in _DynamoDB_ and retrieved within _SageMaker_.
 
@@ -25,7 +25,8 @@ The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/data
 
 Subsequently, the original column containing the price is removed. Additionally, exploratory data analysis was conducted to identify the most relevant correlations for training.
 
-> [!NOTE] > _KNN_, _Logistic Regression_, and _XGBoost_ models were tested using both the original dataset and the dataset with selected relevant columns.
+> [!NOTE]
+> KNN, Logistic Regression, and XGBoost models were tested using both the original dataset and the dataset with selected relevant columns.
 
 The results with the selected dataset were:
 
