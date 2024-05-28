@@ -1,6 +1,6 @@
 # HOTEL RESERVATION PREDICTION
 
-> **OVERVIEW**
+> ### **<font color="#FFFFFF">OVERVIEW</font>**
 
 The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation.
 
