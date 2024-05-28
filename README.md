@@ -1,14 +1,18 @@
 # HOTEL RESERVATION PREDICTION
 
-> ### **<font color="#FFFFFF">OVERVIEW</font>**
+> ### **OVERVIEW**
 
 The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation.
 
 The creation and training of the model were carried out using _Amazon SageMaker_, and the training data is stored in _DynamoDB_. After training, the model is stored in _Amazon S3_. To enable the utilization of the model, an API service was developed using _Python_ and the _FastAPI_ framework to load the trained model from _S3_ and perform cost per room inference. The deployment of the service is conducted through _AWS Elastic Beanstalk_.
 
+---
+
 > ### **ARCHITECTURE**
 
 ![alt text](docs/image.png)
+
+---
 
 > ### **MODEL TRAINING**
 
@@ -45,6 +49,8 @@ The results with the original dataset were:
 
 Based on the results, it was observed that the _XGBoost_ model demonstrated the best performance with both datasets. Strategies such as oversampling, undersampling, and hyperparameter tuning were applied to enhance the model. It was concluded that the optimal performance of this model was achieved using the original dataset with oversampling, resulting in an accuracy of 84%.
 
+---
+
 > ### **API IMPLEMENTATION**
 
 The Hotel Reservation Prediction API was developed using the _FastAPI_ framework, leveraging its efficiency. Users can utilize _Swagger_ to easily submit reservation details such as the number of adults, children, nights of stay, and lead time. The API returns the predicted class for the reservation, indicating the corresponding price range.
@@ -54,6 +60,8 @@ The Hotel Reservation Prediction API was developed using the _FastAPI_ framework
 | POST   | /api/v1/predict | Submits data for prediction |
 
 The inference process comprises several sequential steps. Firstly, incoming parameters are received and subjected to validation using Pydantic, a _Python_ library designed for data validation. Following this, categorical parameters undergo conversion into a binary numerical format to ensure compatibility with the model. Subsequently, the _XGBoost_ model executes prediction operations on the transformed input data, facilitated by its ability to handle structured data effectively. Post-prediction, both the input parameters and the resultant prediction are recorded in the _DynamoDB_ table, facilitating traceability and further analysis. Finally, the API response encapsulates the predicted class determined by the model, thus completing the inference process.
+
+---
 
 > ### **AUTHORS**
 
