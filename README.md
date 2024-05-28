@@ -17,7 +17,7 @@ The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/data
 > [!IMPORTANT]
 > The data preprocessing included adding a new label column to classify the price into three numerical categories:
 >
-> [1] Price LTE to 85 | [2] Price GT 85 and LT 115 | [3] Price GTE to 115
+> `1` Price LTE to 85 | `2` Price GT 85 and LT 115 | `3` Price GTE to 115
 
 Subsequently, the original column containing the price is removed. Additionally, exploratory data analysis was conducted to identify the most relevant correlations for training.
 
