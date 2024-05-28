@@ -1,6 +1,6 @@
 # HOTEL RESERVATION PREDICTION
 
-> ### **OVERVIEW**
+> **OVERVIEW**
 
 The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation.
 
