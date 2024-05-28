@@ -10,18 +10,14 @@ The creation and training of the model were carried out using _Amazon SageMaker_
 
 ![alt text](docs/image.png)
 
-> ### MODEL TRAINING
+> ### **MODEL TRAINING**
 
 The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset), which contains various information about thousands of reservations, including the price per room, our target variable for analysis. The dataset is stored in _DynamoDB_ and retrieved within _SageMaker_.
 
 > [!IMPORTANT]
 > The data preprocessing included adding a new label column to classify the price into three numerical categories:
 >
-> `1` Price less than or equal to 85
->
-> `2` Price is between 85 and 115
->
-> `3` Price is greater than or equal to 115
+> [1] Price LTE to 85 | [2] Price GT 85 and LT 115 | [3] Price GTE to 115
 
 Subsequently, the original column containing the price is removed. Additionally, exploratory data analysis was conducted to identify the most relevant correlations for training.
 
