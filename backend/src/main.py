@@ -68,11 +68,11 @@ def predict(request: UserParamsReq):
         room_type_reserved_Room_Type_5=user_params.room_type_reserved == "5",
         room_type_reserved_Room_Type_6=user_params.room_type_reserved == "6",
         room_type_reserved_Room_Type_7=user_params.room_type_reserved == "7",
-        market_segment_type_Aviation=user_params.market_segment_type == "Aviation",
-        market_segment_type_Complementary=user_params.market_segment_type == "Complementary",
-        market_segment_type_Corporate=user_params.market_segment_type == "Corporate",
-        market_segment_type_Offline=user_params.market_segment_type == "Offline",
         market_segment_type_Online=user_params.market_segment_type == "Online",
+        market_segment_type_Offline=user_params.market_segment_type == "Offline",
+        market_segment_type_Corporate=user_params.market_segment_type == "Corporate",
+        market_segment_type_Complementary=user_params.market_segment_type == "Complementary",
+        market_segment_type_Aviation=user_params.market_segment_type == "Aviation",
         booking_status_Canceled=user_params.booking_status_Canceled == "Yes",
         booking_status_Not_Canceled=user_params.booking_status_Canceled == "No"
     )
