@@ -1,6 +1,6 @@
 # HOTEL RESERVATION PREDICTION
 
-> ### **OVERVIEW**
+### **OVERVIEW**
 
 The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation.
 
@@ -8,13 +8,13 @@ The creation and training of the model were carried out using _Amazon SageMaker_
 
 ---
 
-> ### **ARCHITECTURE**
+### **ARCHITECTURE**
 
 ![alt text](docs/image.png)
 
 ---
 
-> ### **MODEL TRAINING**
+### **MODEL TRAINING**
 
 The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset), which contains various information about thousands of reservations, including the price per room, our target variable for analysis. The dataset is stored in _DynamoDB_ and retrieved within _SageMaker_.
 
@@ -40,18 +40,18 @@ The results with the selected dataset were:
 
 The results with the original dataset were:
 
-| Modelo                    | Precisão | Recall | F1-score | Acurácia |
-| ------------------------- | -------- | ------ | -------- | -------- |
-| **Linear Learner**        | 0.61     | 0.62   | 0.61     | 0.61     |
-| **XGBoost**               | 0.84     | 0.84   | 0.84     | 0.837    |
-| **XGBoost Oversampling**  | 0.85     | 0.85   | 0.85     | 0.84     |
-| **XGBoost Undersampling** | 0.83     | 0.83   | 0.83     | 0.835    |
+| Model                     | Precision | Recall | F1-score | Accuracy |
+| ------------------------- | --------- | ------ | -------- | -------- |
+| **Linear Learner**        | 0.61      | 0.62   | 0.61     | 0.61     |
+| **XGBoost**               | 0.84      | 0.84   | 0.84     | 0.837    |
+| **XGBoost Oversampling**  | 0.85      | 0.85   | 0.85     | 0.84     |
+| **XGBoost Undersampling** | 0.83      | 0.83   | 0.83     | 0.835    |
 
 Based on the results, it was observed that the _XGBoost_ model demonstrated the best performance with both datasets. Strategies such as oversampling, undersampling, and hyperparameter tuning were applied to enhance the model. It was concluded that the optimal performance of this model was achieved using the original dataset with oversampling, resulting in an accuracy of 84%.
 
 ---
 
-> ### **API IMPLEMENTATION**
+### **API IMPLEMENTATION**
 
 The Hotel Reservation Prediction API was developed using the _FastAPI_ framework, leveraging its efficiency. Users can utilize _Swagger_ to easily submit reservation details such as the number of adults, children, nights of stay, and lead time. The API returns the predicted class for the reservation, indicating the corresponding price range.
 
@@ -63,6 +63,6 @@ The inference process comprises several sequential steps. Firstly, incoming para
 
 ---
 
-> ### **AUTHORS**
+### **AUTHORS**
 
 [Giovane Iwamoto](https://github.com/GiovaneIwamoto) | [Gustavo Serra](https://github.com/GustavoSVasconcelos) | [Isabela Buzzo](https://github.com/isabelabuzzo) | [Leandro Pereira](https://github.com/leojgpereira)
