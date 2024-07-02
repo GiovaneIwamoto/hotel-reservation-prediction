@@ -2,9 +2,7 @@
 
 ### **OVERVIEW**
 
-The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation.
-
-The creation and training of the model were carried out using _Amazon SageMaker_, and the training data is stored in _DynamoDB_. After training, the model is stored in _Amazon S3_. To enable the utilization of the model, an API service was developed using _Python_ and the _FastAPI_ framework to load the trained model from _S3_ and perform cost per room inference. The deployment of the service is conducted through _AWS Elastic Beanstalk_.
+The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation. The creation and training of the model were carried out using _Amazon SageMaker_, and the training data is stored in _DynamoDB_. After training, the model is stored in _Amazon S3_. To enable the utilization of the model, an API service was developed using _Python_ and the _FastAPI_ framework to load the trained model from _S3_ and perform cost per room inference. The deployment of the service is conducted through _AWS Elastic Beanstalk_.
 
 ---
 
@@ -21,7 +19,7 @@ The dataset used is the [Hotel Reservations Dataset](https://www.kaggle.com/data
 > [!IMPORTANT]
 > The data preprocessing included adding a new label column to classify the price into three numerical categories:
 >
-> `1 Price LTE to 85` | `2 Price GT 85 and LT 115` | `3 Price GTE to 115`
+> 1 Price LTE to 85 | 2 Price GT 85 and LT 115 | 3 Price GTE to 115
 
 Subsequently, the original column containing the price is removed. Additionally, exploratory data analysis was conducted to identify the most relevant correlations for training.
 
@@ -48,6 +46,8 @@ The results with the original dataset were:
 | **XGBoost Undersampling** | 0.83      | 0.83   | 0.83     | 0.835    |
 
 Based on the results, it was observed that the _XGBoost_ model demonstrated the best performance with both datasets. Strategies such as oversampling, undersampling, and hyperparameter tuning were applied to enhance the model. It was concluded that the optimal performance of this model was achieved using the original dataset with oversampling, resulting in an accuracy of 84%.
+
+![alt text](/docs/heatmap.png)
 
 ---
 
