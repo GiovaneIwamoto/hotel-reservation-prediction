@@ -8,9 +8,12 @@ The project aims to develop a machine learning model capable of predicting the c
 
 ### **ARCHITECTURE**
 
-![alt text](docs/image.png)
+![alt text](docs/architecture.png)
 
 ---
+
+> [!WARNING]
+> It is imperative for users to deploy their own application on AWS using their own credentials to ensure compliance and security. This ensures that users have full control over their application's environment and data, facilitating customization and enhancing security measures.
 
 ### **MODEL TRAINING**
 
@@ -60,6 +63,9 @@ The Hotel Reservation Prediction API was developed using the _FastAPI_ framework
 | POST   | /api/v1/predict | Submits data for prediction |
 
 The inference process comprises several sequential steps. Firstly, incoming parameters are received and subjected to validation using Pydantic, a _Python_ library designed for data validation. Following this, categorical parameters undergo conversion into a binary numerical format to ensure compatibility with the model. Subsequently, the _XGBoost_ model executes prediction operations on the transformed input data, facilitated by its ability to handle structured data effectively. Post-prediction, both the input parameters and the resultant prediction are recorded in the _DynamoDB_ table, facilitating traceability and further analysis. Finally, the API response encapsulates the predicted class determined by the model, thus completing the inference process.
+
+> [!CAUTION]
+> Credentials should remain local to your environment only. Never expose your credentials in any part of the code, such as in source files, comments, or commit history. Instead, use environment variables or secure secret management tools to manage and access your credentials securely.
 
 ---
 
