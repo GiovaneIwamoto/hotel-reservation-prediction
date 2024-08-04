@@ -4,7 +4,7 @@
 
 The project aims to develop a machine learning model capable of predicting the cost per room in a hotel reservation. The creation and training of the model were carried out using _Amazon SageMaker_, and the training data is stored in _DynamoDB_. After training, the model is stored in _Amazon S3_. To enable the utilization of the model, an API service was developed using _Python_ and the _FastAPI_ framework to load the trained model from _S3_ and perform cost per room inference. The deployment of the service is conducted through _AWS Elastic Beanstalk_.
 
-[![Icons](https://skillicons.dev/icons?i=aws,py,dynamodb,docker,postman&theme=dark)](https://skillicons.dev)
+[![Icons](https://skillicons.dev/icons?i=aws,py,dynamodb,docker,fastapi,postman&theme=dark)](https://skillicons.dev)
 
 ---
 
